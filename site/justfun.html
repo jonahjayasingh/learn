@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" xmlns:fb="http://ogp.me/ns/fb#" xmlns:addthis="http://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4745434794451545",
+          enable_page_level_ads: true
+     });
+</script>
+<!--[if lt IE 9]>
+	<script src="https://pediaa.com/wp-content/themes/voice/js/html5.js"></script>
+<![endif]-->
+
+<title>What is the Difference Between Quicksort and Merge Sort - Pediaa.Com</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.1.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="The main difference between quicksort and merge sort is that the quicksort sorts the elements by comparing each element with an element called a pivot while the merge sort divides the array into two subarrays again and again until one element is left."/>
+<link rel="canonical" href="https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What is the Difference Between Quicksort and Merge Sort - Pediaa.Com" />
+<meta property="og:description" content="The main difference between quicksort and merge sort is that the quicksort sorts the elements by comparing each element with an element called a pivot while the merge sort divides the array into two subarrays again and again until one element is left." />
+<meta property="og:url" content="https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/" />
+<meta property="og:site_name" content="Pediaa.Com" />
+<meta property="article:tag" content="Merge Sort" />
+<meta property="article:tag" content="Merge Sort Definition" />
+<meta property="article:tag" content="Merge Sort Functionality" />
+<meta property="article:tag" content="Quicksort" />
+<meta property="article:tag" content="Quicksort Definition" />
+<meta property="article:tag" content="Quicksort Functionality" />
+<meta property="article:tag" content="Quicksort vs Merge Sort" />
+<meta property="article:section" content="Programming" />
+<meta property="article:published_time" content="2018-12-10T02:04:21+00:00" />
+<meta property="og:image" content="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-2.jpg" />
+<meta property="og:image:secure_url" content="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-2.jpg" />
+<meta property="og:image:width" content="511" />
+<meta property="og:image:height" content="969" />
+<script type='application/ld+json'>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://pediaa.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://pediaa.com/category/technology/","name":"Technology"}},{"@type":"ListItem","position":3,"item":{"@id":"https://pediaa.com/category/technology/it/","name":"IT"}},{"@type":"ListItem","position":4,"item":{"@id":"https://pediaa.com/category/technology/it/programming/","name":"Programming"}},{"@type":"ListItem","position":5,"item":{"@id":"https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/","name":"What is the Difference Between Quicksort and Merge Sort"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Pediaa.Com &raquo; Feed" href="https://pediaa.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Pediaa.Com &raquo; Comments Feed" href="https://pediaa.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Pediaa.Com &raquo; What is the Difference Between Quicksort and Merge Sort Comments Feed" href="https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/pediaa.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.9"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://pediaa.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://pediaa.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-style-css'  href='https://pediaa.com/wp-content/plugins/light/css/jquery.fancybox.css?ver=5.1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='mks_shortcodes_simple_line_icons-css'  href='https://pediaa.com/wp-content/plugins/meks-flexible-shortcodes/css/simple-line/simple-line-icons.css?ver=1.2.7' type='text/css' media='screen' />
+<link rel='stylesheet' id='mks_shortcodes_css-css'  href='https://pediaa.com/wp-content/plugins/meks-flexible-shortcodes/css/style.css?ver=1.2.7' type='text/css' media='screen' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='https://pediaa.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='vce_font_0-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400&#038;subset=latin%2Clatin-ext&#038;ver=2.2.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='vce_style-css'  href='https://pediaa.com/wp-content/themes/voice/css/min.css?ver=2.2.1' type='text/css' media='screen, print' />
+<style id='vce_style-inline-css' type='text/css'>
+body {background-color:#ffffff;}body,.mks_author_widget h3,.site-description,.meta-category a,textarea {font-family: 'Open Sans';font-weight: 400;}h1,h2,h3,h4,h5,h6,blockquote,.vce-post-link,.site-title,.site-title a,.main-box-title,.comment-reply-title,.entry-title a,.vce-single .entry-headline p,.vce-prev-next-link,.author-title,.mks_pullquote,.widget_rss ul li .rsswidget,#bbpress-forums .bbp-forum-title,#bbpress-forums .bbp-topic-permalink {font-family: 'Open Sans';font-weight: 400;}.main-navigation a,.sidr a{font-family: 'Open Sans';font-weight: 400;}.vce-single .entry-content,.vce-single .entry-headline,.vce-single .entry-footer{width: 760px;}.vce-lay-a .lay-a-content{width: 760px;max-width: 760px;}.vce-page .entry-content,.vce-page .entry-title-page {width: 600px;}.vce-sid-none .vce-single .entry-content,.vce-sid-none .vce-single .entry-headline,.vce-sid-none .vce-single .entry-footer {width: 1050px;}.vce-sid-none .vce-page .entry-content,.vce-sid-none .vce-page .entry-title-page,.error404 .entry-content {width: 600px;max-width: 600px;}body, button, input, select, textarea{color: #444444;}h1,h2,h3,h4,h5,h6,.entry-title a,.prev-next-nav a,#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-topic-permalink,.woocommerce ul.products li.product .price .amount{color: #232323;}a,.entry-title a:hover,.vce-prev-next-link:hover,.vce-author-links a:hover,.required,.error404 h4,.prev-next-nav a:hover,#bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover,.woocommerce ul.products li.product h3:hover,.woocommerce ul.products li.product h3:hover mark,.main-box-title a:hover{color: #6db3bf;}.vce-square,.vce-main-content .mejs-controls .mejs-time-rail .mejs-time-current,button,input[type="button"],input[type="reset"],input[type="submit"],.vce-button,.pagination-wapper a,#vce-pagination .next.page-numbers,#vce-pagination .prev.page-numbers,#vce-pagination .page-numbers,#vce-pagination .page-numbers.current,.vce-link-pages a,#vce-pagination a,.vce-load-more a,.vce-slider-pagination .owl-nav > div,.vce-mega-menu-posts-wrap .owl-nav > div,.comment-reply-link:hover,.vce-featured-section a,.vce-lay-g .vce-featured-info .meta-category a,.vce-404-menu a,.vce-post.sticky .meta-image:before,#vce-pagination .page-numbers:hover,#bbpress-forums .bbp-pagination .current,#bbpress-forums .bbp-pagination a:hover,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce ul.products li.product .added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce ul.products li.product .added_to_cart:hover,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.comments-holder .navigation .page-numbers.current,.vce-lay-a .vce-read-more:hover,.vce-lay-c .vce-read-more:hover{background-color: #6db3bf;}#vce-pagination .page-numbers,.comments-holder .navigation .page-numbers{background: transparent;color: #6db3bf;border: 1px solid #6db3bf;}.comments-holder .navigation .page-numbers:hover{background: #6db3bf;border: 1px solid #6db3bf;}.bbp-pagination-links a{background: transparent;color: #6db3bf;border: 1px solid #6db3bf !important;}#vce-pagination .page-numbers.current,.bbp-pagination-links span.current,.comments-holder .navigation .page-numbers.current{border: 1px solid #6db3bf;}.widget_categories .cat-item:before,.widget_categories .cat-item .count{background: #6db3bf;}.comment-reply-link,.vce-lay-a .vce-read-more,.vce-lay-c .vce-read-more{border: 1px solid #6db3bf;}.entry-meta div,.entry-meta div a,.comment-metadata a,.meta-category span,.meta-author-wrapped,.wp-caption .wp-caption-text,.widget_rss .rss-date,.sidebar cite,.site-footer cite,.sidebar .vce-post-list .entry-meta div,.sidebar .vce-post-list .entry-meta div a,.sidebar .vce-post-list .fn,.sidebar .vce-post-list .fn a,.site-footer .vce-post-list .entry-meta div,.site-footer .vce-post-list .entry-meta div a,.site-footer .vce-post-list .fn,.site-footer .vce-post-list .fn a,#bbpress-forums .bbp-topic-started-by,#bbpress-forums .bbp-topic-started-in,#bbpress-forums .bbp-forum-info .bbp-forum-content,#bbpress-forums p.bbp-topic-meta,span.bbp-admin-links a,.bbp-reply-post-date,#bbpress-forums li.bbp-header,#bbpress-forums li.bbp-footer,.woocommerce .woocommerce-result-count,.woocommerce .product_meta{color: #9b9b9b;}.main-box-title, .comment-reply-title, .main-box-head{background: #ffffff;color: #232323;}.main-box-title a{color: #232323;}.sidebar .widget .widget-title a{color: #232323;}.main-box,.comment-respond,.prev-next-nav{background: #f9f9f9;}.vce-post,ul.comment-list > li.comment,.main-box-single,.ie8 .vce-single,#disqus_thread,.vce-author-card,.vce-author-card .vce-content-outside,.mks-bredcrumbs-container,ul.comment-list > li.pingback{background: #ffffff;}.mks_tabs.horizontal .mks_tab_nav_item.active{border-bottom: 1px solid #ffffff;}.mks_tabs.horizontal .mks_tab_item,.mks_tabs.vertical .mks_tab_nav_item.active,.mks_tabs.horizontal .mks_tab_nav_item.active{background: #ffffff;}.mks_tabs.vertical .mks_tab_nav_item.active{border-right: 1px solid #ffffff;}#vce-pagination,.vce-slider-pagination .owl-controls,.vce-content-outside,.comments-holder .navigation{background: #f3f3f3;}.sidebar .widget-title{background: #6db3bf;color: #ffffff;}.sidebar .widget{background: #ffffff;}.sidebar .widget,.sidebar .widget li a,.sidebar .mks_author_widget h3 a,.sidebar .mks_author_widget h3,.sidebar .vce-search-form .vce-search-input,.sidebar .vce-search-form .vce-search-input:focus{color: #444444;}.sidebar .widget li a:hover,.sidebar .widget a,.widget_nav_menu li.menu-item-has-children:hover:after,.widget_pages li.page_item_has_children:hover:after{color: #6db3bf;}.sidebar .tagcloud a {border: 1px solid #6db3bf;}.sidebar .mks_author_link,.sidebar .tagcloud a:hover,.sidebar .mks_themeforest_widget .more,.sidebar button,.sidebar input[type="button"],.sidebar input[type="reset"],.sidebar input[type="submit"],.sidebar .vce-button,.sidebar .bbp_widget_login .button{background-color: #6db3bf;}.sidebar .mks_author_widget .mks_autor_link_wrap,.sidebar .mks_themeforest_widget .mks_read_more{background: #f3f3f3;}.sidebar #wp-calendar caption,.sidebar .recentcomments,.sidebar .post-date,.sidebar #wp-calendar tbody{color: rgba(68,68,68,0.7);}.site-footer{background: #373941;}.site-footer .widget-title{color: #ffffff;}.site-footer,.site-footer .widget,.site-footer .widget li a,.site-footer .mks_author_widget h3 a,.site-footer .mks_author_widget h3,.site-footer .vce-search-form .vce-search-input,.site-footer .vce-search-form .vce-search-input:focus{color: #f9f9f9;}.site-footer .widget li a:hover,.site-footer .widget a,.site-info a{color: #1e73be;}.site-footer .tagcloud a {border: 1px solid #1e73be;}.site-footer .mks_author_link,.site-footer .mks_themeforest_widget .more,.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.site-footer .vce-button,.site-footer .tagcloud a:hover{background-color: #1e73be;}.site-footer #wp-calendar caption,.site-footer .recentcomments,.site-footer .post-date,.site-footer #wp-calendar tbody,.site-footer .site-info{color: rgba(249,249,249,0.7);}.top-header,.top-nav-menu li .sub-menu{background: #3a3a3a;}.top-header,.top-header a{color: #ffffff;}.top-header .vce-search-form .vce-search-input,.top-header .vce-search-input:focus,.top-header .vce-search-submit{color: #ffffff;}.top-header .vce-search-form .vce-search-input::-webkit-input-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input::-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-ms-input-placeholder { color: #ffffff;}.header-1-wrapper{height: 50px;padding-top: 15px;}.header-2-wrapper,.header-3-wrapper{height: 50px;}.header-2-wrapper .site-branding,.header-3-wrapper .site-branding{top: 15px;left: 0px;}.site-title a, .site-title a:hover{color: #ffffff;}.site-description{color: #aaaaaa;}.main-header{background-color: #3a4349;}.header-bottom-wrapper{background: #fcfcfc;}.vce-header-ads{margin: -20px 0;}.header-3-wrapper .nav-menu > li > a{padding: 15px 15px;}.header-sticky,.sidr{background: rgba(58,67,73,0.95);}.ie8 .header-sticky{background: #3a4349;}.main-navigation a,.nav-menu .vce-mega-menu > .sub-menu > li > a,.sidr li a,.vce-menu-parent{color: #6db3bf;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul li:hover > a,.nav-menu ul .current-menu-item a,.nav-menu ul .current_page_item a,.vce-menu-parent:hover,.sidr li a:hover,.main-navigation li.current-menu-item.fa:before,.vce-responsive-nav{color: #6db3bf;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul,.header-sticky .nav-menu > .current_page_item:hover > a,.header-sticky .nav-menu > .current-menu-item:hover > a,.header-sticky .nav-menu > .current-menu-ancestor:hover > a,.header-sticky .main-navigation a.vce-item-selected:hover{background-color: #3a4349;}.search-header-wrap ul{border-top: 2px solid #6db3bf;}.vce-border-top .main-box-title{border-top: 2px solid #6db3bf;}.tagcloud a:hover,.sidebar .widget .mks_author_link,.sidebar .widget.mks_themeforest_widget .more,.site-footer .widget .mks_author_link,.site-footer .widget.mks_themeforest_widget .more,.vce-lay-g .entry-meta div,.vce-lay-g .fn,.vce-lay-g .fn a{color: #FFF;}.vce-featured-header .vce-featured-header-background{opacity: 0.5}.vce-featured-grid .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}#back-top {background: #323232}.sidr input[type=text]{background: rgba(109,179,191,0.1);color: rgba(109,179,191,0.5);}.meta-image:hover a img,.vce-lay-h .img-wrap:hover .meta-image > img,.img-wrp:hover img,.vce-gallery-big:hover img,.vce-gallery .gallery-item:hover img,.vce_posts_widget .vce-post-big li:hover img,.vce-featured-grid .owl-item:hover img,.vce-post-img:hover img,.mega-menu-img:hover img{-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);-ms-transform: scale(1.1);transform: scale(1.1);}
+</style>
+<link rel='stylesheet' id='meks-ads-widget-css'  href='https://pediaa.com/wp-content/plugins/meks-easy-ads-widget/css/style.css?ver=1.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-author-widget-css'  href='https://pediaa.com/wp-content/plugins/meks-smart-author-widget/css/style.css?ver=1.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='meks-social-widget-css'  href='https://pediaa.com/wp-content/plugins/meks-smart-social-widget/css/style.css?ver=1.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tipsy-css'  href='https://pediaa.com/wp-content/plugins/wp-shortcode/css/tipsy.css?ver=5.1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='mts_wpshortcodes-css'  href='https://pediaa.com/wp-content/plugins/wp-shortcode/css/wp-shortcode.css?ver=5.1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://pediaa.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5.3' type='text/css' media='all' />
+<script type='text/javascript' src='https://pediaa.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/meks-flexible-shortcodes/js/main.js?ver=1.2.7'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/wp-shortcode/js/jquery.tipsy.js?ver=5.1.9'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/wp-shortcode/js/wp-shortcode.js?ver=5.1.9'></script>
+<link rel='https://api.w.org/' href='https://pediaa.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pediaa.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://pediaa.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://wp.me/p9Tifp-bCr' />
+<link rel="alternate" type="application/json+oembed" href="https://pediaa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpediaa.com%2Fwhat-is-the-difference-between-quicksort-and-merge-sort%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://pediaa.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpediaa.com%2Fwhat-is-the-difference-between-quicksort-and-merge-sort%2F&#038;format=xml" />
+<script type="text/javascript" async defer data-pin-color="red"  data-pin-hover="true" src="https://pediaa.com/wp-content/plugins/pinterest-pin-it-button-on-image-hover-and-post/js/pinit.js"></script>	<script>
+		</script>
+	
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//s1.wp.com'>
+<link rel='dns-prefetch' href='//s2.wp.com'>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+<style type='text/css'>img#wpstats{display:none}</style><link rel="amphtml" href="https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/amp/"><link rel="shortcut icon" href="https://pediaa.com/wp-content/uploads/2016/12/favi.png" type="image/x-icon" /><style type="text/css">.main-header .header-3-wrapper .site-title a { font-size: 30px; } .header-3-wrapper .site-branding { position: relative; top: -3px; } .header-3-wrapper .main-navigation { float: left; margin-left: 30px; } .main-box-title{ color: #6db3bf; } .vce-search-form{ padding: 10px 0 0 0; margin-left: 30%; } input[type="text"] { background-color: #ffffff; height: 30px; font-size: 15px; padding-left: 15px; } .vce-search-submit { height: 30px; margin-left: -20px; font-size: 15px; margin-top: 0px; border-radius: 0 20px 20px 0; width: auto; padding: 0 20px; } .vce-search-form .vce-search-input, .vce-search-form .vce-search-input, .vce-search-form .vce-search-input:focus { border-radius: 20px 0 0 20px; width: 380px; } .header-3-wrapper .nav-menu > li > a { padding: 18px 15px 12px 15px; } .nav-menu .vce-mega-menu > .sub-menu > li > a { color: #ffffff; text-align: center; } .nav-menu .vce-mega-menu > .sub-menu > li > a:hover { color: #444b51; } .nav-menu .vce-mega-menu > .sub-menu > li { padding: 20px 10px; } .nav-menu .vce-mega-menu > .sub-menu { background-color: #6db3bf; } h2{ color: #6db3bf; font-size: 28px; line-height: 32px; } h3{ color: #6db3bf; font-size: 26px; line-height: 30px; } h4{ color: #000000; font-size: 22px; line-height: 25px; } .entry-title a { color: #444b51; } .entry-title a:hover { color: #232323; } ul.soc-nav-menu li a { color: #ffffff; background-color:none; } ul.soc-nav-menu li a:hover { color: #ffffff; } ul.bottom-nav-menu li a { color: #ffffff; } ul.bottom-nav-menu li a:hover { color: #6db3bf; } h1.entry-title { color: #444b51; font-size: 33px; line-height: 35px; margin: 0 30px; font-weight: 600; } .vce-single .entry-header { margin:0; } .entry-header .entry-meta { margin: 20px 0 -20px 20px; text-align: left; } .entry-header .entry-title { margin: 20px 0 -20px 20px; text-align: left; } .addthis_toolbox .at-icon-wrapper { border-radius: 20px; } .main-box { margin-bottom: 10px; } .comment-respond { margin-bottom: 10px; } .vce_posts_widget .vce-post-list li { text-align: left; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #dddddd; } .vce-next-link, .vce-prev-link { width: 350px; } .admincolor{ color:#232323; } .adminspace { margin-top:10px; margin-bottom:20px; } #breadcrumbs { margin-bottom: -10px; padding: 10px 20px; font-size: 14px; } table { border-collapse: collapse; width: 100%; } th, td { text-align: left; padding: 8px; } tr:nth-child(even){background-color: #94cfc9} tr:nth-child(odd){background-color: #cee9f4} .art_mid_ad_container { padding: 20px 0; text-align: center; text-align: -webkit- center; text-align: -moz- center; } @media only screen and (max-width:1023px){ .header-sticky .vce-responsive-nav, .vce-res-nav { display: none; } .site-branding,.header-3-wrapper .site-branding{ float:left; padding: 6px 0 0 0; } .vce-search-form .vce-search-input, .vce-search-form .vce-search-input, .vce-search-form .vce-search-input:focus { border-radius: 20px 0 0 20px; width: auto; } .vce-search-submit { height: 30px; margin-left: -20px; font-size: 12px; margin-top: 0px; border-radius: 0 20px 20px 0; width: auto; padding: 0 10px; } .vce-search-form { padding: 10px 0; } .site-branding img { margin-top: -7px; } } @media only screen and (min-width:200px) and (max-width:670px) { .vce-single .entry-content{ padding: 15px; } .entry-header .entry-title { margin: 20px 0 -20px 0px; text-align: left; } } @media only screen and (max-width:450px){ h1.entry-title { margin: auto; font-size: 26px; line-height: 30px; } h2{ font-size: 24px; line-height: 25px; } h3{ font-size: 22px; line-height: 25px; } h4{ font-size: 20px; line-height: 25px; } .vce-responsive-nav { font-size: 22px; padding-top: 4px; } .site-branding,.header-3-wrapper .site-branding{ float:left; padding: 4px 0 0 0; } .vce-search-form .vce-search-input, .vce-search-form .vce-search-input, .vce-search-form .vce-search-input:focus { border-radius: 20px 0 0 20px; width: 130px; height: 30px; font-size: 12px; margin-top: 5px; } .vce-search-submit { height: 30px; margin-left: -10px; font-size: 12px; margin-top: 5px; border-radius: 0 20px 20px 0; width: auto; padding: 0 5px; } .vce-search-form { padding: 5px 0; } } @media only screen and (max-width:320px){ .vce-search-form { padding: 5px 0; margin-left: 35%; } }</style><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53591216-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body class="post-template-default single single-post postid-44667 single-format-standard chrome vce-sid-right">
+
+<div id="vce-main">
+
+<header id="header" class="main-header">
+<div class="container header-main-area header-3-wrapper">	
+		<div class="vce-res-nav">
+	<a class="vce-responsive-nav" href="#sidr-main"><i class="fa fa-bars"></i></a>
+</div>
+<div class="site-branding">
+		
+	
+	<span class="site-title">
+		<a href="https://pediaa.com/" title="Pediaa.Com" class="has-logo"><img src="https://pediaa.com/wp-content/uploads/2016/12/logo_new.png" alt="Pediaa.Com" /></a>
+	</span>
+
+	
+
+</div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<ul id="vce_main_navigation_menu" class="nav-menu"><li id="menu-item-19810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-19810 vce-mega-menu"><a href="https://pediaa.com/">EXPLORE</a>
+<ul class="sub-menu">
+	<li id="menu-item-2330" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2330 vce-cat-19"><a href="https://pediaa.com/category/travel-tour/">Travel &#038; Tour</a>	<li id="menu-item-2331" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2331 vce-cat-16"><a href="https://pediaa.com/category/education/">Education</a>	<li id="menu-item-2332" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2332 vce-cat-14"><a href="https://pediaa.com/category/language/">Language</a>	<li id="menu-item-2333" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2333 vce-cat-18"><a href="https://pediaa.com/category/business/">Business</a>	<li id="menu-item-2334" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2334 vce-cat-95"><a href="https://pediaa.com/category/business/finance/">Finance</a>	<li id="menu-item-2335" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2335 vce-cat-243"><a href="https://pediaa.com/category/business/finance/accounting/">Accounting</a>	<li id="menu-item-2336" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2336 vce-cat-277"><a href="https://pediaa.com/category/countries/india/">India</a>	<li id="menu-item-2337" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2337 vce-cat-199"><a href="https://pediaa.com/category/science/mathematics/">Mathematics</a>	<li id="menu-item-2338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2338 vce-cat-8"><a href="https://pediaa.com/category/science/chemistry/">Chemistry</a>	<li id="menu-item-2339" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2339 vce-cat-206"><a href="https://pediaa.com/category/life-style/fashion/">Fashion</a></ul>
+</ul></nav>		
+		<form class="vce-search-form" action="https://pediaa.com/" method="get">
+	<input name="s" class="vce-search-input" size="20" type="text" value="Type here to search..." onfocus="(this.value == 'Type here to search...') && (this.value = '')" onblur="(this.value == '') && (this.value = 'Type here to search...')" placeholder="Type here to search..." />
+		<button type="submit" class="vce-search-submit"><i class="fa fa-search" aria-hidden="true"></i></button> 
+</form></div></header>
+
+<div id="main-wrapper">
+
+
+
+
+
+<div id="content" class="container site-content">
+
+				
+	<div id="primary" class="vce-main-content">
+
+		<main id="main" class="main-box main-box-single">
+		<p id="breadcrumbs"><span><span><a href="https://pediaa.com/" >Home</a> » <span><a href="https://pediaa.com/category/technology/" >Technology</a> » <span><a href="https://pediaa.com/category/technology/it/" >IT</a> » <span><a href="https://pediaa.com/category/technology/it/programming/" >Programming</a> » <span class="breadcrumb_last" aria-current="page">What is the Difference Between Quicksort and Merge Sort</span></span></span></span></span></span></p>			
+							<article id="post-44667" class="vce-single post-44667 post type-post status-publish format-standard has-post-thumbnail hentry category-programming tag-merge-sort tag-merge-sort-definition tag-merge-sort-functionality tag-quicksort tag-quicksort-definition tag-quicksort-functionality tag-quicksort-vs-merge-sort">
+
+			<header class="entry-header">
+			
+			<h1 class="entry-title">What is the Difference Between Quicksort and Merge Sort</h1>
+			<div class="entry-meta"><div class="meta-item date"><span class="updated">December 10, 2018</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://pediaa.com/author/lithmee/">Lithmee</a></span></span></div><div class="meta-item rtime">5 min read</div></div>
+		</header>
+	
+	
+		
+	    
+		
+	<div class="entry-content">
+	<!-- AddThis Sharing Buttons above -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style" 
+addthis:url='https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/'
+ addthis:title='What is the Difference Between Quicksort and Merge Sort'>
+ <a class="addthis_button_facebook"></a>
+ <a class="addthis_button_twitter"></a>
+ <a class="addthis_button_google_plusone_share"></a>
+ <a class="addthis_button_pinterest_share"></a>
+ <a class="addthis_button_whatsapp"></a>
+ <a class="addthis_button_viber"></a>
+ <a class="addthis_button_compact"></a>
+ <a class="addthis_counter addthis_bubble_style"></a>
+ </div>
+<style>
+.art_top_ad_container{float: left; position: relative; margin-top: 0px; padding: 0 10px;}
+.art_mid_ad_container{float: right; position: relative;margin:  20px;   padding: 0; }
+.art_top_ad { width:336px;height:280px; }
+.art_middle_ad{ display:inline-block;width:336px;height:280px; }
+@media(max-width: 330px) {
+.art_top_ad,.art_middle_ad  { width:300px;height:250px; }
+ }
+@media(max-width: 500px) { .art_top_ad_container,.art_mid_ad_container{float: unset; text-align: center; margin: 0px; padding: 0 px;}
+.art_top_ad,.art_middle_ad  { width:320px;height:100px; }
+ }
+ 
+@media(max-width: 1022px) {  
+.art_sidebar_ad { display:none !important;  }
+.art_middle_ad{ display:inline-block; width:300px;height:250px;  }
+}
+</style>
+<div class="art_top_ad_container" >	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Pediaa Article Top -->
+<ins class="adsbygoogle art_top_ad"
+     style="display:inline-block;"
+     data-ad-client="ca-pub-4745434794451545"
+     data-ad-slot="9886811285"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>	
+<p style="text-align: justify;">The <strong>main difference</strong> between quicksort and merge sort is that the <strong>quicksort sorts the elements by comparing each element with an element called a pivot while merge sort divides the <a href="https://pediaa.com/difference-between-array-and-pointer/#Array">array</a> into two subarrays again and again until one element is left. </strong></p>
+<p style="text-align: justify;">Sorting is the method of arranging data in a particular order. When arranging the data, it is possible to consider the numerical or lexicographical order. Sorting helps to search and access data elements faster and quicker. There are various sorting <a href="https://pediaa.com/difference-between-algorithm-and-pseudocode/#Algorithm">algorithms </a>and quicksort and merge sort are two of them.</p>
+<h3>Key Areas Covered</h3>
+<p style="padding-left: 30px;"><strong>1. <a href="#Quicksort">What is Quicksort</a></strong><br /> <em><a href="#Bubble Sort"> </a>    &#8211; Definition, Functionality</em><br /> <strong>2. <a href="#Merge Sort">What is Merge Sort</a></strong><br /> <em>     &#8211; Definition, Functionality</em><br /> <strong>3. <a href="#Quicksort vs Merge Sort - Comparison of Key differences">What is the Difference Between Quicksort and Merge Sort</a></strong><br /> <em>     &#8211; Comparison of Key differences</em></p>
+<h3>Key Terms</h3>
+<p><em>Algorithm, Array, Merge Sort, Quicksort</em></p>
+<p><em><img class="pinit aligncenter wp-image-44676" src="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort-Comparison-Summary.jpg" alt="Difference Between Quicksort and Merge Sort - Comparison Summary" width="475" height="536" srcset="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort-Comparison-Summary.jpg 799w, https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort-Comparison-Summary-266x300.jpg 266w" sizes="(max-width: 475px) 100vw, 475px" /></em></p>
+<h2 id="Quicksort">What is Quicksort</h2>
+<p style="text-align: justify;">Quicksort is an internal algorithm that uses &#8216;divide and conquer technique&#8217;. It is also called <strong>a partition exchange sort</strong>. It uses a key element called pivot for comparing and partitioning the elements in the array. The items with a lesser value than the pivot go to the left side of the pivot while items with a greater value than the pivot go to the right side of the pivot. The left section is called the left partition, and the right section is called the right partition.</p>
+<div id="attachment_44672" style="width: 289px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-44672" class="wp-image-44672" src="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-2.jpg" alt="Difference Between Quicksort and Merge Sort" width="279" height="530" srcset="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-2.jpg 511w, https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-2-158x300.jpg 158w" sizes="(max-width: 279px) 100vw, 279px" /><p id="caption-attachment-44672" class="wp-caption-text"><strong>Figure 1: Quicksort</strong></p></div>
+<p>Refer to the below example.</p>
+<p style="padding-left: 30px;">36  34  43  11  15 20 28 45  27  32</p>
+<p style="text-align: justify;">Consider 32 as the pivot and consider 36 and 27. The conditions 36 &lt; pivot, 27 &gt; pivot are false. Therefore, we can swap these two values. Now the list is as follows.</p>
+<p style="padding-left: 30px;">27  34  43  11  15  20  28  45  36  32</p>
+<p style="text-align: justify;">Consider the values 34 and 45. When considering 34 &lt; pivot, the condition is false. Similarly, 45 &gt; pivot condition is true. Now, we can move from 45 to 28. Let’s consider 34 and 28. 34 &lt; pivot is false and 28 &gt; pivot is false. Therefore, we can swap 34 and 28.</p>
+<p style="padding-left: 30px;">27 28  43  11  15  20  34  45  36  32</p>
+<p>Consider 43 and 20. 43 &lt; pivot is false. 20 &gt; pivot is false. Therefore, we can swap the two numbers. Now the list is as follows.</p>
+<p style="padding-left: 30px;">27  28  20  11  15  43  34  45 36  32</p>
+<p>Now consider 11 and 15. 11 &lt; pivot is true. We can consider 15. It is less than 32. It is the overlapping point, and we can place 32 as follows.</p>
+<p style="padding-left: 30px;">27  28  20  11  15  32  43  34  45  36 </p>
+<p>Now the numbers in the left side of the pivot are smaller than the pivot, and the right side of the pivot are greater than the pivot. We can apply quicksort to the left and right partitions to sort the entire list.</p>
+<h2 id="Merge Sort">What is Merge Sort</h2>
+<p style="text-align: justify;">Merge sort is an external algorithm that uses ‘divide and conquer technique’. It splits the array into two sections. It sorts each array and combines them together to form the sorted array. Merge sort requires additional storage to sort the auxiliary array.</p>
+<p>Consider the following example.</p>
+<div id="attachment_44673" style="width: 560px" class="wp-caption aligncenter"><img aria-describedby="caption-attachment-44673" class="size-full wp-image-44673" src="https://pediaa.com/wp-content/uploads/2018/12/Difference-Between-Quicksort-and-Merge-Sort_Figure-1.jpg" alt="Main Difference - Quicksort vs Merge Sort" width="550" height="500" /><p id="caption-attachment-44673" class="wp-caption-text"><strong>Figure 2: Merge Sort</strong></p></div>
+<p>We can divide the array into two sections. Now there are two arrays as follows.</p>
+<p style="padding-left: 30px;">38  27  43  3         9  82  10</p>
+<p style="text-align: justify;">Consider 38  27  43  3. We can divide it into two arrays again. They are 38  27  and 43 3.  38 27 divides into 38 and 27 while 43 3 divides into 43 and 3.  Sorting 38 and 27 gives 27   38. Sorting 43 3 gives 3 43.  Now it is possible to combine 27  38  and 3  43.  After sorting them, we get an array as 3  27 38  43. </p>
+<p style="text-align: justify;">Similarly, consider 9 82 10. We can divide it into two arrays again. They are 9 82 and 10. 9 82 divides into 9 and 82. Moreover, there is number 10 in the other array. 9 and 82 sort as 9  82. Thus, this array and array with value 10 combines and provides 9  10 and 82.</p>
+<p style="text-align: justify;">Finally, 3  27  38  43 and 9  10  82 combine to provide the sorted array.</p>
+<h2 id="Quicksort vs Merge Sort - Comparison of Key differences">Difference Between Quicksort and Merge Sort</h2>
+<h3>Definition</h3>
+<p style="text-align: justify;">Quicksort is an efficient sorting algorithm, serving as a systematic method for placing the elements of an array in order. In contrast, merge sort is an efficient, general purpose, comparison-based sorting algorithms. Thus, this is the fundamental difference between quicksort and merge sort.</p>
+<h3>Functionality</h3>
+<p>Aboveall, the functionality is the main difference between quicksort and merge sort. Quicksort sorts the elements by comparing each element with the pivot while merge sort divides the array into two subarrays (n/2) again and again until one element is left. </p>
+<h3>Application</h3>
+<p>Also, while quicksort is suitable for small arrays, merge sort works for any type of array.</p>
+<h3>Speed</h3>
+<p style="text-align: justify;">Another difference between quicksort and merge sort is that the quicksort works faster for small data sets while merge sort works in consistent speed for all datasets.</p>
+<h3>Space Requirement</h3>
+<p style="text-align: justify;">Moreover, the space requirement is also an important difference between quicksort and merge sort. Quicksort requires minimum space compared to merge sort.  </p>
+<h3>Efficiency</h3>
+<p>Furthermore, quicksort is not efficient for large arrays, but merge sort is more efficient than quicksort. Hence, this is another difference between quicksort and merge sort.</p>
+<h3>Conclusion</h3>
+<p style="text-align: justify;">In summary, the main difference between quicksort and merge sort is that the quicksort sorts the elements by comparing each element with an element called a pivot while the merge sort divides the array into two subarrays again and again until one element is left.</p>
+<h5>Reference:</h5>
+<p>1. Quicksort Algorithm| Part 2, Education 4u, 15 Mar. 2018, <a href="https://www.youtube.com/watch?v=NmpJG94mNNY" rel="nofollow">Available here</a>.<br />2. Merge Sort Example, Education 4u, 15 Mar. 2018, <a href="https://www.youtube.com/watch?v=eGO_FMca7mk" rel="nofollow">Available here</a>.</p>
+<h5>Image Courtesy:</h5>
+<p>1. &#8220;Quicksort-diagram&#8221; By Znupi &#8211; Own work (Public Domain) via <a href="https://commons.wikimedia.org/w/index.php?curid=6352260" rel="nofollow">Commons Wikimedia</a><br />2. &#8220;Merge sort algorithm diagram&#8221; By Vineet Kumar at English Wikipedia &#8211; Transferred from en.wikipedia to Commons by Eric Bauman using CommonsHelper (Public Domain) via <a href="https://commons.wikimedia.org/w/index.php?curid=8004317" rel="nofollow">Commons Wikimedia</a></p>
+<p><a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red" data-pin-height="128"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" /></a></p>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$.post('https://pediaa.com/wp-admin/admin-ajax.php', {action: 'wpt_view_count', id: '44667'});
+});
+</script><!-- AddThis Sharing Buttons below -->		
+		
+			<!-- AddThis Sharing Buttons above -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style" 
+addthis:url='https://pediaa.com/what-is-the-difference-between-quicksort-and-merge-sort/'
+ addthis:title='What is the Difference Between Quicksort and Merge Sort'>
+ <a class="addthis_button_facebook"></a>
+ <a class="addthis_button_twitter"></a>
+ <a class="addthis_button_google_plusone_share"></a>
+ <a class="addthis_button_pinterest_share"></a>
+ <a class="addthis_button_whatsapp"></a>
+ <a class="addthis_button_viber"></a>
+ <a class="addthis_button_compact"></a>
+ <a class="addthis_counter addthis_bubble_style"></a>
+ </div>
+	</div>
+	
+	
+	<div style="text-align:center;padding-top:3px;padding-bottom:10px; padding-left: 0px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Pediaa Article Bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-4745434794451545"
+     data-ad-slot="3322024083"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	</div>
+	
+	
+	 
+</article>									<section class="mbt-border-top author-box">
+
+	<div class="main-box-inside">
+
+		<div class="data-image">
+			<img alt='' src='https://secure.gravatar.com/avatar/8cc64aef57c72631937c57f254df0fd4?s=112&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/8cc64aef57c72631937c57f254df0fd4?s=224&#038;d=mm&#038;r=g 2x' class='avatar avatar-112 photo' height='112' width='112' />		</div>
+		
+		<div class="data-content">
+			
+			<h3>About the Author:<span class="admincolor"> Lithmee</span></h3>
+			
+			<div class="data-entry-content">
+				<p>Lithmee holds a Bachelor of Science degree in Computer Systems Engineering and is reading for her Master’s degree in Computer Science. She is passionate about sharing her knowldge in the areas of  programming, data science, and computer systems.</p>
+			</div>
+			
+			<div class="data-links adminspace">
+				<a href="https://pediaa.com/author/lithmee/" class="vce-author-link vce-button">View all posts</a>
+			</div>
+			<div class="vce-author-links">
+											
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+									
+			</div>
+			
+		</div>
+
+	</div>
+
+</section>										
+						
+		</main>
+
+		
+		<div class="main-box vce-related-box">
+
+	<h3 class="main-box-title">​You May Also Like These</h3>
+	
+	<div class="main-box-inside">
+		  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+				 style="display:block"
+				 data-ad-format="autorelaxed"
+				 data-ad-client="ca-pub-4745434794451545"
+				 data-ad-slot="7290037687"></ins>
+			<script>
+				 (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+	</div>
+
+	</div>
+		
+		
+		
+		
+
+		<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/what-is-the-difference-between-quicksort-and-merge-sort/#respond" style="display:none;">Cancel reply</a></small></h3>
+			<div id="commentform" class="comment-form">
+				<iframe src="https://jetpack.wordpress.com/jetpack-comment/?blogid=146165211&#038;postid=44667&#038;comment_registration=0&#038;require_name_email=1&#038;stc_enabled=0&#038;stb_enabled=0&#038;show_avatars=1&#038;avatar_default=mystery&#038;greeting=Leave+a+Reply&#038;greeting_reply=Leave+a+Reply+to+%25s&#038;color_scheme=light&#038;lang=en-US&#038;jetpack_version=3.5.3&#038;sig=63bbfddfd700e9e0c03ef188a1770c617f5f73ef#parent=https%3A%2F%2Fpediaa.com%2Fwhat-is-the-difference-between-quicksort-and-merge-sort%2F" allowtransparency="false" style="width:100%; height: 430px;border:0px;" frameBorder="0" scrolling="no" name="jetpack_remote_comment" id="jetpack_remote_comment"></iframe>
+			</div>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="" />
+
+		
+	</div>
+
+		<aside id="sidebar" class="sidebar right">
+		<div id="vce_adsense_widget-3" class="widget vce_adsense_widget vce_adsense_expand">		<div class="vce_adsense_wrapper">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Pediaa Sidebar Top -->
+<ins class="adsbygoogle art_sidebar_ad"
+     style="display:block"
+     data-ad-client="ca-pub-4745434794451545"
+     data-ad-slot="9508158488"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>		</div>
+	
+		</div><div id="vce_posts_widget-2" class="widget vce_posts_widget"><h4 class="widget-title"><span>You May Like</span></h4>
+		
+		<ul class="vce-post-list" data-autoplay="">
+
+			
+		 		<li>
+		 					 			
+		 			<a href="https://pediaa.com/what-is-the-difference-between-agile-and-iterative/" class="featured_image_sidebar" title="What is the Difference Between Agile and Iterative"><span class="vce-post-img"><img width="145" height="100" src="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Agile-and-Iterative_Figure-1-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="Difference Between Agile and Iterative" srcset="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Agile-and-Iterative_Figure-1-145x100.jpg 145w, https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Agile-and-Iterative_Figure-1-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://pediaa.com/what-is-the-difference-between-agile-and-iterative/" title="What is the Difference Between Agile and Iterative" class="vce-post-link">What is the Difference Between Agile and Iterative</a>
+			 					 			</div>
+		 		</li>
+			
+		 		<li>
+		 					 			
+		 			<a href="https://pediaa.com/what-is-the-difference-between-object-code-and-executable-code/" class="featured_image_sidebar" title="What is the Difference Between Object Code and Executable Code"><span class="vce-post-img"><img width="145" height="100" src="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Object-Code-and-Executable-Code_Figure-1-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="Difference Between Object Code and Executable Code" srcset="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Object-Code-and-Executable-Code_Figure-1-145x100.jpg 145w, https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Object-Code-and-Executable-Code_Figure-1-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://pediaa.com/what-is-the-difference-between-object-code-and-executable-code/" title="What is the Difference Between Object Code and Executable Code" class="vce-post-link">What is the Difference Between Object Code and...</a>
+			 					 			</div>
+		 		</li>
+			
+		 		<li>
+		 					 			
+		 			<a href="https://pediaa.com/what-is-the-difference-between-source-program-and-object-program/" class="featured_image_sidebar" title="What is the Difference Between Source Program and Object Program"><span class="vce-post-img"><img width="145" height="100" src="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Source-Program-and-Object-Program_Figure-1-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="Difference Between Source Program and Object Program" srcset="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Source-Program-and-Object-Program_Figure-1-145x100.jpg 145w, https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Source-Program-and-Object-Program_Figure-1-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://pediaa.com/what-is-the-difference-between-source-program-and-object-program/" title="What is the Difference Between Source Program and Object Program" class="vce-post-link">What is the Difference Between Source Program and...</a>
+			 					 			</div>
+		 		</li>
+			
+		 		<li>
+		 					 			
+		 			<a href="https://pediaa.com/what-is-the-difference-between-fuzzy-logic-and-neural-network/" class="featured_image_sidebar" title="What is the Difference Between Fuzzy Logic and Neural Network"><span class="vce-post-img"><img width="145" height="100" src="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Fuzzy-Logic-and-Neural-Network_Figure-1-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="Difference Between Fuzzy Logic and Neural Network" srcset="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Fuzzy-Logic-and-Neural-Network_Figure-1-145x100.jpg 145w, https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Fuzzy-Logic-and-Neural-Network_Figure-1-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://pediaa.com/what-is-the-difference-between-fuzzy-logic-and-neural-network/" title="What is the Difference Between Fuzzy Logic and Neural Network" class="vce-post-link">What is the Difference Between Fuzzy Logic and...</a>
+			 					 			</div>
+		 		</li>
+			
+		 		<li>
+		 					 			
+		 			<a href="https://pediaa.com/what-is-the-difference-between-syntax-analysis-and-semantic-analysis/" class="featured_image_sidebar" title="What is the Difference Between Syntax Analysis and Semantic Analysis"><span class="vce-post-img"><img width="145" height="100" src="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Syntax-Analysis-and-Semantic-Analysis_Figure-1-145x100.jpg" class="attachment-vce-lay-d size-vce-lay-d wp-post-image" alt="Difference Between Syntax Analysis and Semantic Analysis" srcset="https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Syntax-Analysis-and-Semantic-Analysis_Figure-1-145x100.jpg 145w, https://pediaa.com/wp-content/uploads/2019/08/Difference-Between-Syntax-Analysis-and-Semantic-Analysis_Figure-1-380x260.jpg 380w" sizes="(max-width: 145px) 100vw, 145px" /></span></a>
+		 			<div class="vce-posts-wrap">
+		 							 			<a href="https://pediaa.com/what-is-the-difference-between-syntax-analysis-and-semantic-analysis/" title="What is the Difference Between Syntax Analysis and Semantic Analysis" class="vce-post-link">What is the Difference Between Syntax Analysis and...</a>
+			 					 			</div>
+		 		</li>
+			
+		  </ul>
+		
+		
+		</div>		<div id="recent-posts-3" class="widget widget_recent_entries">		<h4 class="widget-title"><span>Recent Posts</span></h4>		<ul>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-hors-doeuvres-and-canapes/">What is the Difference Between Hors d’oeuvres and Canapes</a>
+									</li>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-brand-loyalty-and-customer-loyalty/">What is the Difference Between Brand Loyalty and Customer Loyalty</a>
+									</li>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-sprouted-wheat-and-whole-wheat/">What is the Difference Between Sprouted Wheat and Whole Wheat</a>
+									</li>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-rolled-oats-and-quick-oats/">What is the Difference Between Rolled Oats and Quick Oats</a>
+									</li>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-legislation-and-policy/">What is the Difference Between Legislation and Policy</a>
+									</li>
+											<li>
+					<a href="https://pediaa.com/what-is-the-difference-between-rye-and-wheat/">What is the Difference Between Rye and Wheat</a>
+									</li>
+					</ul>
+		</div>	</aside>
+
+</div>
+
+
+
+	<footer id="footer" class="site-footer">
+
+		
+					<div class="container-full site-info">
+				<div class="container">
+											<div class="vce-wrap-left">
+							<p><p>Copyright &copy; 2017 <a href="https://pediaa.com" title="Know about Anything">Pediaa.Com</a>.</p>
+</p>						</div>
+					
+											<div class="vce-wrap-right">
+								<ul id="vce_footer_menu" class="bottom-nav-menu"><li id="menu-item-2328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2328"><a href="https://pediaa.com/contact/">Contact</a></li>
+<li id="menu-item-2329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2329"><a href="https://pediaa.com/about-us/">About Us</a></li>
+</ul>						</div>
+						
+
+					
+			
+				</div>
+			</div>
+		
+
+	</footer>
+
+
+</div>
+</div>
+
+<a href="javascript:void(0)" id="back-top"><i class="fa fa-angle-up"></i></a>
+
+	<div style="display:none">
+	<div class="grofile-hash-map-8cc64aef57c72631937c57f254df0fd4">
+	</div>
+	</div>
+<script data-cfasync="false" type="text/javascript">
+var addthis_config = {"data_track_clickback":false,"ui_atversion":300,"ignore_server_config":true};
+var addthis_share = {};
+</script>
+                <!-- AddThis Settings Begin -->
+                <script data-cfasync="false" type="text/javascript">
+                    var addthis_product = "wpp-5.2.3";
+                    var wp_product_version = "wpp-5.2.3";
+                    var wp_blog_version = "5.1.9";
+                    var addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","cms_version":"5.1.9","plugin_name":"Share Buttons by AddThis","plugin_version":"5.2.3","anonymous_profile_id":"wp-74bb12f92e59aeb653451336f495efec","plugin_mode":"WordPress","select_prefs":{"addthis_per_post_enabled":true,"addthis_above_enabled":true,"addthis_below_enabled":false,"addthis_sidebar_enabled":false,"addthis_above_showon_home":false,"addthis_below_showon_home":false,"addthis_above_showon_pages":false,"addthis_below_showon_pages":false,"addthis_above_showon_categories":false,"addthis_below_showon_categories":false,"addthis_above_showon_archives":false,"addthis_below_showon_archives":false,"addthis_above_showon_posts":false,"addthis_above_showon_excerpts":false,"addthis_below_showon_posts":true,"addthis_below_showon_excerpts":true,"addthis_sidebar_showon_home":true,"addthis_sidebar_showon_posts":true,"addthis_sidebar_showon_pages":true,"addthis_sidebar_showon_archives":true,"addthis_sidebar_showon_categories":true,"sharing_enabled_on_post_via_metabox":true},"page_info":{"template":"posts","post_type":""}};
+                    if (typeof(addthis_config) == "undefined") {
+                        var addthis_config = {"data_track_clickback":false,"ui_atversion":300,"ignore_server_config":true};
+                    }
+                    if (typeof(addthis_share) == "undefined") {
+                        var addthis_share = {};
+                    }
+                    if (typeof(addthis_layers) == "undefined") {
+                        var addthis_layers = {};
+                    }
+                </script>
+                <script
+                    data-cfasync="false"
+                    type="text/javascript"
+                    src="//s7.addthis.com/js/300/addthis_widget.js#pubid=wp-74bb12f92e59aeb653451336f495efec "
+                    
+                >
+                </script>
+                <script data-cfasync="false" type="text/javascript">
+                    (function() {
+                        var at_interval = setInterval(function () {
+                            if(window.addthis) {
+                                clearInterval(at_interval);
+                                addthis.layers(addthis_layers);
+                            }
+                        },1000)
+                    }());
+                </script>
+                <script type="text/javascript">/* <![CDATA[ */ jQuery(document).ready( function() { jQuery.post( "https://pediaa.com/wp-admin/admin-ajax.php", { action : "entry_views", _ajax_nonce : "4c00ad6032", post_id : 44667 } ); } ); /* ]]> */</script>
+<link rel='stylesheet' id='addthis_output-css'  href='https://pediaa.com/wp-content/plugins/addthis/css/output.css?ver=5.1.9' type='text/css' media='all' />
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/pediaa.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.2.1'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/light/js/jquery.fancybox.pack.js?ver=5.1.9'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/light/js/light.js?ver=5.1.9'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=202116'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2021Apraa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=5.1.9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var vce_js_settings = {"sticky_header":"1","sticky_header_offset":"100","sticky_header_logo":"","logo":"https:\/\/pediaa.com\/wp-content\/uploads\/2016\/12\/logo_new.png","logo_retina":"","logo_mobile":"","logo_mobile_retina":"","rtl_mode":"0","ajax_url":"https:\/\/pediaa.com\/wp-admin\/admin-ajax.php","ajax_mega_menu":"","mega_menu_slider":"","mega_menu_subcats":"","lay_fa_grid_center":"","full_slider_autoplay":"","grid_slider_autoplay":"","fa_big_opacity":{"1":"0.5","2":"0.7"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://pediaa.com/wp-content/themes/voice/js/min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-includes/js/comment-reply.min.js?ver=5.1.9'></script>
+<script type='text/javascript' src='https://pediaa.com/wp-includes/js/wp-embed.min.js?ver=5.1.9'></script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+			// window.location.reload() doesn't respect the Hash in IE
+			window.location.hash = window.location.hash;
+		}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=146165211&postid=44667&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=3.5.3&sig=63bbfddfd700e9e0c03ef188a1770c617f5f73ef#parent=https%3A%2F%2Fpediaa.com%2Fwhat-is-the-difference-between-quicksort-and-merge-sort%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=146165211&postid=44667&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=3.5.3&sig=63bbfddfd700e9e0c03ef188a1770c617f5f73ef#parent=https%3A%2F%2Fpediaa.com%2Fwhat-is-the-difference-between-quicksort-and-merge-sort%2F";
+				}
+			};
+
+	
+			if ( 'undefined' !== typeof addComment ) {
+				addComment._Jetpack_moveForm = addComment.moveForm;
+
+				addComment.moveForm = function( commId, parentId, respondId, postId ) {
+					var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ), cancelClick, cancel;
+
+					if ( false === returnValue ) {
+						cancel = document.getElementById( 'cancel-comment-reply-link' );
+						cancelClick = cancel.onclick;
+						cancel.onclick = function() {
+							var cancelReturn = cancelClick.call( this );
+							if ( false !== cancelReturn ) {
+								return cancelReturn;
+							}
+
+							if ( !comm_par ) {
+								return cancelReturn;
+							}
+
+							comm_par = 0;
+
+							tellFrameNewParent();
+
+							return cancelReturn;
+						};
+					}
+
+					if ( comm_par == parentId ) {
+						return returnValue;
+					}
+
+					comm_par = parentId;
+
+					tellFrameNewParent();
+
+					return returnValue;
+				};
+			}
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "https:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		</script>
+
+	<script type='text/javascript' src='https://stats.wp.com/e-202116.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.5.3',blog:'146165211',post:'44667',tz:'0',srv:'pediaa.com'} ]);
+	_stq.push([ 'clickTrackerInit', '146165211', '44667' ]);
+</script>
+<!--wp_footer-->
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Database Caching 1/109 queries in 0.117 seconds using apc
+
+ Served from: pediaa.com @ 2021-04-22 14:29:08 by W3 Total Cache -->
